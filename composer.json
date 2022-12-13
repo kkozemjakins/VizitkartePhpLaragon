@@ -1,0 +1,6 @@
+{
+    "name": "drupal/myphp-test",
+    "description": "Test php",
+    "type": "project",
+    "require": {}
+}

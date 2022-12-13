@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/comments.css" />
+    <script src="/js/comments.js" defer></script>
+
+</head>
+
+<style>
+    body {
+        font-family: 'Signika';font-size: 30px;
+    }
+</style>
+
+<body class="body">
+    <button type="button" onclick="location.href='login.html';">Quit</button>
+    <button class="button" id="back" onclick="location.href='menu.html';">Menu</button>
+    
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span class="glyphicon glyphicon-comment"></span>
+            Comments
+            <b id="username"></b>
+        </div>
+        <div class="panel-body" id="comments_list">
+
+        </div>
+        
+        <div id="input_div">
+            <b>New Comment</b><br/>
+            <input ng-model="Comment" id="text" class="form-control" placeholder="Comment" required>
+            <button class="button" id="Login" onclick="AddComment()">Add Comment</button>
+        </div>
+        
+    </div>
+
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyB5kDPH3a1K7xBYRmMZBvOd0eaqnFxv_pI",
+          authDomain: "vizitkarte-ce23a.firebaseapp.com",
+          databaseURL: "https://vizitkarte-ce23a-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "vizitkarte-ce23a",
+          storageBucket: "vizitkarte-ce23a.appspot.com",
+          messagingSenderId: "127310109784",
+          appId: "1:127310109784:web:8c3c0273b77789ec25be2d",
+          measurementId: "G-9HYTPR9E45"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+
+    
+</body>
+</html>
